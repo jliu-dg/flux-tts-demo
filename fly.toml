@@ -1,11 +1,16 @@
-app = 'vapi-support-demo-change-me'
-primary_region = 'sjc'
+# fly.toml app configuration file generated for flux-tts-demo on 2026-04-28T15:55:54Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'flux-tts-demo'
+primary_region = 'ams'
 
 [build]
-  dockerfile = "Dockerfile"
+  dockerfile = 'Dockerfile'
 
 [http_service]
-  internal_port = 5000
+  internal_port = 8080
   force_https = true
   auto_stop_machines = 'stop'
   auto_start_machines = true
@@ -13,18 +18,19 @@ primary_region = 'sjc'
   processes = ['app']
 
   [http_service.concurrency]
-    type = "connections"
+    type = 'connections'
     hard_limit = 25
     soft_limit = 20
 
-[[http_service.checks]]
-  interval = "10s"
-  timeout = "2s"
-  grace_period = "5s"
-  method = "GET"
-  path = "/"
+  [[http_service.checks]]
+    interval = '10s'
+    timeout = '2s'
+    grace_period = '5s'
+    method = 'GET'
+    path = '/'
 
 [[vm]]
   memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
+  memory_mb = 256
