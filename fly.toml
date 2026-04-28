@@ -1,4 +1,4 @@
-app = 'deepgram-smart-city'
+app = 'vapi-support-demo-change-me'
 primary_region = 'sjc'
 
 [build]
