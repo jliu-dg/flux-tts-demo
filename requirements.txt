@@ -54,7 +54,7 @@ simple-websocket==1.1.0
     # via python-engineio
 typing-extensions==4.15.0
     # via janus
-urllib3==2.6.3
+urllib3==2.7.0
     # via requests
 websockets==12.0
     # via saga-smart-city
