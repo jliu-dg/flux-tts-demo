@@ -44,7 +44,7 @@ packaging==26.0
     # via gunicorn
 python-dotenv==1.0.0
     # via saga-smart-city
-python-engineio==4.13.1
+python-engineio==4.13.2
     # via python-socketio
 python-socketio==5.16.1
     # via flask-socketio
